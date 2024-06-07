@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundations - Data Types and Conditionals exercises</title>
+  </head>
+  <body>
+    <div class="dataTypesAndConditionals">
+      <div>
+        <h3>Exercise 1</h3>
+        <p id="dataTypes"></p>
+        <p id="numberCheck"></p>
+      </div>
+    </div>
+
+    <script>
+      function troubleshooting() {
+        const a = 1;
+        const b = 1;
+
+        let result;
+
+        // Edit between these lines
+        // =================================
+        result = a + b;
+
+        // =================================
+
+        return result;
+      }
+
+      // Call the troubleshooting function
+      document.getElementById("dataTypes").innerHTML = troubleshooting(10, 2);
+
+      number = Number(prompt("enter a number"));
+
+      function numberChecker() {
+        if (number >= 10) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      document.getElementById("numberCheck").innerHTML = numberChecker();
+    </script>
+  </body>
+</html>

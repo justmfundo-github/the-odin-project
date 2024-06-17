@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fizz Buzz</title>
+  </head>
+  <body>
+    <div>
+      <p id="fizz-buzz"></p>
+    </div>
+    <script>
+      let answer = parseInt(prompt("Please enter a number you would like to FizzBuzz up to: "));
+
+      const fizzBuzzParagraph = document.getElementById("fizz-buzz");
+      let fizzBuzzString = "";
+
+      for (let i = 1; i <= answer; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("FizzBuzz");
+          fizzBuzzString = fizzBuzzString.concat("FizzBuzz");
+        } else if (i % 3 === 0) {
+          console.log("Fizz");
+          fizzBuzzString = fizzBuzzString.concat("Fizz");
+        } else if (i % 5 === 0) {
+          console.log("Buzz");
+          fizzBuzzString = fizzBuzzString.concat("Buzz");
+        } else {
+          console.log(i);
+          fizzBuzzString = fizzBuzzString.concat(i);
+        }
+
+        if (i != answer) {
+          fizzBuzzString = fizzBuzzString.concat(", ");
+        }
+      }
+      fizzBuzzParagraph.textContent = fizzBuzzString;
+    </script>
+  </body>
+</html>
